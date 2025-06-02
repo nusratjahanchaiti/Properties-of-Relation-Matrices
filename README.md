@@ -21,7 +21,6 @@ The program outputs these matrices and their property evaluations to a text file
 Given an integer `n`, the program generates `n` symmetric random relation matrices of size `n x n`, where entries are either 0 or 1, with the diagonal fixed at 0 (no self-relations). It then determines whether each matrix satisfies important relation properties.
 
 ---
-
 ##  Features
 
 - Generates random symmetric relation matrices.
@@ -33,6 +32,39 @@ Given an integer `n`, the program generates `n` symmetric random relation matric
   - **Function:** Each column contains at most one `1`, meaning a functional relation.
 - Measures and records execution time for property checks.
 - Outputs results to a file named `relations.txt`.
+
+---
+
+##  Theoretical Complexity Analysis
+
+In the given code, the most significant operations are:
+
+1. **Generating a random matrix**  
+   - Time Complexity: **O(n²)**  
+   - Uses nested loops to fill a symmetric matrix with random values.
+
+2. **Checking symmetry**  
+   - Time Complexity: **O(n²)**  
+   - Compares each element with its symmetric counterpart across the diagonal.
+
+3. **Checking anti-symmetry**  
+   - Time Complexity: **O(n²)**  
+   - Checks for mutually related pairs (except diagonal) to ensure they don’t exist.
+
+4. **Checking transitivity**  
+   - Time Complexity: **O(n³)**  
+   - For each related pair `(a, b)` and `(b, c)`, it verifies whether `(a, c)` also exists.
+
+5. **Checking equivalence**  
+   - Time Complexity: **O(n² + n³) = O(n³)**  
+   - Since it depends on both symmetry and transitivity checks.
+
+6. **Checking function**  
+   - Time Complexity: **O(n²)**  
+   - Ensures each column has at most one '1', modeling a valid function.
+
+### ⏱️ Overall Complexity
+The total time complexity is **O(n³)**, dominated by the transitivity check.
 
 ---
 ## 📂 File Structure
