@@ -1,0 +1,30 @@
+Matrix :
+0 0 1 
+1 0 1 
+1 1 0 
+Symmetric: yes
+Anti-symmetric: no
+Transitive: no
+Equivalence: no
+Function: no
+Execution time: 0.001000 ms
+Matrix :
+0 0 0 
+1 0 0 
+0 1 0 
+Symmetric: yes
+Anti-symmetric: no
+Transitive: no
+Equivalence: no
+Function: no
+Execution time: 0.000700 ms
+Matrix :
+0 0 0 
+0 0 1 
+0 0 0 
+Symmetric: yes
+Anti-symmetric: no
+Transitive: yes
+Equivalence: yes
+Function: yes
+Execution time: 0.000300 ms
